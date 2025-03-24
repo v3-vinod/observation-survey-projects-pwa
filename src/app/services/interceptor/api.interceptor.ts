@@ -52,7 +52,7 @@ export class ApiInterceptor implements HttpInterceptor {
       });
     } else if (req.headers.has("skipInterceptor")) {
       return req.clone({
-        headers: req.headers.delete('skipInterceptor'),
+        headers: req.headers.delete('skipInterceptor')
       });
     } else {
         return req.clone({
