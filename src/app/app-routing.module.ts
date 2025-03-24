@@ -6,6 +6,10 @@ import { allowPageAccessGuard } from './services/guard/allowPageAccess/allow-pag
 import { PAGE_IDS } from './core/constants/pageIds';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
+  { path: 'mentoring',
+    redirectTo: '', 
+    pathMatch: 'prefix' 
+  },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomePageModule),
@@ -32,6 +36,10 @@ const routes: Routes = [
     loadChildren:() => import('./questionnaire/questionnaire.module').then(m => m.QuestionnaireModule),
     canActivate: [allowPageAccessGuard],
     data: { pageId: PAGE_IDS.questioniare }
+  },
+    {
+    path:'observation',
+    loadChildren:() => import('./observation/observation.module').then(m => m.ObservationModule)
   },
   {
     path: 'qr-scanner',
@@ -100,11 +108,11 @@ const routes: Routes = [
     canActivate:[allowPageAccessGuard],
     data: { pageId: PAGE_IDS.authPages }
   },
-  {
-    path: '**',
-    // redirectTo: 'home',
-    component: PageNotFoundComponent
-  }
+  // {
+  //   path: '**',
+  //   // redirectTo: 'home',
+  //   component: PageNotFoundComponent
+  // }
 ];
 @NgModule({
   imports: [
