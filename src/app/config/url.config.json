@@ -22,7 +22,7 @@
     },
     "profileListing": {
         "listingUrl": "/v1/profile/read",
-        "updateUrl": "/user/v1/user/update",
+        "updateUrl": "/interface/v1/account/update",
         "entityUrl": "/entityListBasedOnEntityType?entityType=",
         "subEntityUrl": "/subEntityList",
         "getSessionImageUploadUrl":"/user/v1/cloud-services/file/getSignedUrl?fileName=",

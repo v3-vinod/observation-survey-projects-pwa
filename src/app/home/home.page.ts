@@ -88,7 +88,10 @@ export class HomePage {
   navigateTo(data: any) {
     if(data.listType == 'report'){
       this.router.navigate(['report/list'], { queryParams: { type: data.listType } });
-    }else{
+    }else if(data?.redirect){
+      window.location.href = data.redirectionUrl
+    }
+    else{
       this.router.navigate([data?.redirectionUrl], { queryParams: { type: data.listType } });
     }
   }

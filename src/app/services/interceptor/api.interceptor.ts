@@ -63,7 +63,7 @@ export class ApiInterceptor implements HttpInterceptor {
 
   private isSpecialUrl(url: string): boolean {
     return url.includes('/logout') || 
-           url.includes('/user/update') ||
+           url.includes('/account/update') ||
            url.includes('/cloud-services/file/getSignedUrl') || 
            url.includes('getDownloadableUrl');
   }

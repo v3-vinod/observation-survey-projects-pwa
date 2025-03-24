@@ -297,7 +297,7 @@ export class ProfileEditPage implements isDeactivatable {
         let payload = {
           ...this.formLib?.myForm.value,
           ...this.formLib2?.myForm.value,
-          location: "bangalore",
+          location: "kl",
           about: "PWA"
         };
         this.formJson.forEach((control: any) => {
