@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from 'authentication_frontend_library';
+import { AuthGuard } from 'frontend_authentication_library';
 import { RedirectionHandlerComponent } from './redirection-handler/redirection-handler.component';
 import { allowPageAccessGuard } from './services/guard/allowPageAccess/allow-page-access.guard';
 import { PAGE_IDS } from './core/constants/pageIds';
@@ -104,7 +104,7 @@ const routes: Routes = [
   },
   { path: '',
     // pathMatch: "prefix",
-    loadChildren: () => import('authentication_frontend_library').then(m => m.SlRoutingRoutingModule),
+    loadChildren: () => import('frontend_authentication_library').then(m => m.SlRoutingRoutingModule),
     canActivate:[allowPageAccessGuard],
     data: { pageId: PAGE_IDS.authPages }
   },

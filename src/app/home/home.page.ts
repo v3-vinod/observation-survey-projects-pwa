@@ -8,7 +8,7 @@ import { ToastService } from '../services/toast/toast.service';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs';
 import { FETCH_HOME_FORM, FETCH_HOME_FORM_PROJECT, FETCH_HOME_FORM_SURVEY } from '../core/constants/formConstant';
-import { AuthService } from 'authentication_frontend_library';
+import { AuthService } from 'frontend_authentication_library';
 import { UtilService } from 'src/app/services/util/util.service';
 import { ProfileService } from '../services/profile/profile.service';
 import { ProjectsApiService } from '../services/projects-api/projects-api.service';

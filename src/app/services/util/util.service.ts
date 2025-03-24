@@ -33,6 +33,7 @@ export class UtilService {
   }
 
   async clearDatabase(){
+    document.cookie = "MoodleSession" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     const db = await this.dbService.openDatabase();
     if (db) {
       await this.dbService.clearDb(db, 'projects');
