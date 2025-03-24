@@ -48,6 +48,7 @@ export class HomePage {
   }
 
   ionViewWillEnter() {
+    this.setKeysToLocal()
     this.clearDatabaseHandler = this.handleMessage.bind(this);
       window.addEventListener('message', this.clearDatabaseHandler);
     this.getHomeListing();
@@ -99,5 +100,14 @@ export class HomePage {
     if (event.data && event.data.msg) {
       this.utilService.clearDatabase();
     }
+  }
+
+  setKeysToLocal(){
+    let data = {
+      "X-auth-token" : `bearer ${localStorage.getItem('accToken')}`,
+      'Content-Type': 'application/json',
+      'accept-language': "en"
+    }
+    localStorage.setItem("headers", JSON.stringify(data))
   }
 }

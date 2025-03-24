@@ -56,7 +56,7 @@ export class ApiInterceptor implements HttpInterceptor {
       });
     } else {
         return req.clone({
-          setHeaders: extraHeaders ? { 'X-auth-token': token, ...extraHeaders } : { 'X-auth-token': token }
+          setHeaders: extraHeaders ? { ...extraHeaders, 'X-auth-token': token } : { 'X-auth-token': token }
         });
   }
   }

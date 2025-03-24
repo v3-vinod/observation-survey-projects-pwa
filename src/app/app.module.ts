@@ -72,7 +72,8 @@ export class AppModule {
 
 export function configFactory(http: HttpClient): any {
   return http.get("/assets/config/library-config.json").pipe(switchMap((data:any)=>{
-    data.baseUrl = environment.baseURL
+    data.baseUrl = environment.baseURL,
+    data.projectName = environment.config.title
     return of(data)
   }))
 }
