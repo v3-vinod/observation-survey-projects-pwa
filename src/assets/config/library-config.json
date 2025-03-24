@@ -5,7 +5,7 @@
     "redirectRouteOnLoginSuccess": "home",
     "loginApiPath": "/user/v1/account/login",
     "logoutApiPath": "/user/v1/account/logout",
-    "signUpApiPath": "/user/v1/account/create",
+    "signUpApiPath": "/user/v1/interface/account/create",
     "resetPasswordApiPath": "/user/v1/account/resetPassword",
     "otpGenerationApiPathForRegistration": "/user/v1/account/registrationOtp",
     "otpGenerationApiPathForResetPassword": "/user/v1/account/generateOtp",
